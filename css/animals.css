@@ -1,13 +1,22 @@
-.animals {
-  display: grid;
-  grid-template-columns: 100px 1fr 2fr;
-  gap: 2rem;
+.animals-list {
+  grid-column: 2;
+  height: 370px;
+  overflow-y: scroll;
 }
 
-.animals ul {
-  grid-column: 2;
-  overflow-y: scroll;
-  height: 324px;
+/* check support in other browsers  */
+.animals-list::-webkit-scrollbar {
+  width: 1.8rem;
+}
+
+.animals-list::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-left: 0.4rem solid var(--background-color);
+  border-right: 0.4rem solid var(--background-color);
+}
+
+.animals-list::-webkit-scrollbar-track {
+  background-color: var(--background-color);
 }
 
 .animals-description {
@@ -15,7 +24,7 @@
 }
 
 .animals-description section {
-  margin-bottom: 4rem;
+  margin-bottom: 4.8rem;
 }
 
 .animals-description section:last-child {
@@ -23,12 +32,13 @@
 }
 
 .animals-description h2 {
+  font-family: var(--secondary-font);
+  font-size: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
   color: var(--secondary-color);
   margin-bottom: 1.6rem;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  font-family: var(--secondary-font);
-  font-weight: bold;
 }
 
 .animals-description h2::before {
@@ -41,6 +51,7 @@
 }
 
 .animals-description p {
-  margin-bottom: 1.6rem;
   font-family: var(--primary-font);
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
 }

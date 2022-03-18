@@ -1,9 +1,9 @@
 :root {
   /* main */
-  --primary-color: orange;
-  --secondary-color: tomato;
+  --primary-color: #fb5;
+  --secondary-color: #e54;
 
   /* complementary */
   --darker-color: #222;
-  --background-color: antiquewhite;
+  --background-color: #faf6ed;
 }

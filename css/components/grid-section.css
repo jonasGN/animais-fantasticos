@@ -1,14 +1,21 @@
 .grid-section {
   grid-column: 2 / 4;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
   font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: 90px 300px 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .grid-section h1 {
   grid-column: 1 / -1;
-  font-size: 9.6rem;
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
   font-family: var(--title-font);
+  font-size: 9.6rem;
   font-weight: normal;
   line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
 }

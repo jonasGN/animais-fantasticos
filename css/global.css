@@ -16,10 +16,12 @@ dd {
 
 body {
   display: grid;
-  grid-template-columns: 1fr 120px minmax(auto, 800px) 1fr;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
   color: var(--darker-color);
   background-color: var(--background-color);
-  gap: 8rem 0;
+
+  /* add smoothiness to fonts */
+  -webkit-font-smoothing: antialiased;
 }
 
 /* lists style resets */
