@@ -1,0 +1,23 @@
+.contact {
+  display: grid;
+  grid-template-columns: 100px 1.2fr 2fr;
+  gap: 2rem;
+}
+
+.map {
+  grid-column: 2;
+}
+
+.contact li {
+  font-family: var(--primary-font);
+  margin-bottom: 1.6rem;
+}
+
+.contact li::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1rem;
+  background-color: var(--primary-color);
+  margin-right: 1rem;
+}

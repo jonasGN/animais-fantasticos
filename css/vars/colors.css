@@ -1,0 +1,9 @@
+:root {
+  /* main */
+  --primary-color: orange;
+  --secondary-color: tomato;
+
+  /* complementary */
+  --darker-color: #222;
+  --background-color: antiquewhite;
+}
