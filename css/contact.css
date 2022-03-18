@@ -15,3 +15,12 @@
   background-color: var(--primary-color);
   margin-right: 1rem;
 }
+
+@media (max-width: 700px) {
+  .map {
+    grid-column: 1 / -1;
+  }
+  .contact-list {
+    grid-column: 1 / -1;
+  }
+}

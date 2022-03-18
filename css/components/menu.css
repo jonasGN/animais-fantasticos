@@ -1,7 +1,8 @@
 .menu {
   grid-column: 3 / -1;
   background-color: var(--primary-color);
-  margin: 3.6rem 0;
+  margin-top: 3.6rem;
+  margin-bottom: 3.6rem;
 }
 
 .menu ul {
@@ -21,4 +22,11 @@
   font-family: var(--secondary-font);
   font-weight: bold;
   letter-spacing: 0.1rem;
+}
+
+@media (max-width: 700px) {
+  .menu {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
 }

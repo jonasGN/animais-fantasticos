@@ -25,3 +25,9 @@
   margin-bottom: 1.6rem;
   margin-left: 3rem;
 }
+
+@media (max-width: 700px) {
+  .faq-list {
+    grid-column: 1 / -1;
+  }
+}
