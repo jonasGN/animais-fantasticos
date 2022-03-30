@@ -19,10 +19,6 @@
   background-color: var(--background-color);
 }
 
-.animals-list li {
-  cursor: pointer;
-}
-
 .animals-description {
   grid-column: 3 / -1;
 }
@@ -70,6 +66,10 @@
 }
 
 /* styles controled by scripts */
+.js-enabled .animals-list li {
+  cursor: pointer;
+}
+
 .js-enabled .js-tabcontent section {
   display: none;
 }
