@@ -75,3 +75,27 @@ function initScrollToSection() {
 }
 
 initScrollToSection();
+
+function initWindowScrollAnimation() {
+  const sections = document.querySelectorAll(".js-section");
+
+  if (sections.length) {
+    window.addEventListener('scroll', showContentOnScroll);
+  
+    function showContentOnScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const visibleHeight = window.innerHeight * .7;
+        const isSectionVisible = (sectionTop - visibleHeight) <= 0;
+
+        if (isSectionVisible) {
+          section.classList.add("active");
+        }
+      });
+    }
+
+    showContentOnScroll();
+  }
+}
+
+initWindowScrollAnimation();
