@@ -19,6 +19,10 @@
   background-color: var(--background-color);
 }
 
+.animals-list li {
+  cursor: pointer;
+}
+
 .animals-description {
   grid-column: 3 / -1;
 }
@@ -62,5 +66,26 @@
   }
   .animals-description {
     grid-column: 2 / -1;
+  }
+}
+
+/* styles controled by scripts */
+.js-enabled .js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.active-tab {
+  display: block;
+  animation: show-content .5s forwards;
+}
+
+@keyframes show-content {
+  from {
+    opacity: 0;
+    transform: translate3d(-3rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
