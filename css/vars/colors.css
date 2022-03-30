@@ -2,8 +2,11 @@
   /* main */
   --primary-color: #fb5;
   --secondary-color: #e54;
-
+  
   /* complementary */
   --darker-color: #222;
   --background-color: #faf6ed;
+
+  /* main variations */
+  --secondary-color-05: rgba(238, 85, 68, 0.05);
 }

@@ -74,7 +74,7 @@
   display: none;
 }
 
-.js-tabcontent section.active-tab {
+.js-tabcontent section.active {
   display: block;
   animation: show-content .5s forwards;
 }

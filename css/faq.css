@@ -9,6 +9,7 @@
   color: var(--secondary-color);
   margin-bottom: 1.6rem;
   margin-top: 3.6rem;
+  cursor: pointer;
 }
 
 .faq-list dt::before {
@@ -29,5 +30,45 @@
 @media (max-width: 700px) {
   .faq-list {
     grid-column: 1 / -1;
+  }
+}
+
+/* styles controled by scripts */
+.js-enabled .js-accordion dt {
+  padding: 1.4rem 0;
+  margin-bottom: .8rem;
+  margin-top: 2.4rem;
+}
+
+.js-enabled .js-accordion dt:hover {
+  background-color: var(--secondary-color-05);
+}
+
+.js-enabled .js-accordion dt::after {
+  content: "↴";
+  margin-left: 1rem;
+}
+
+.js-enabled .js-accordion dt.active::after {
+  content: "↰";
+}
+
+.js-enabled .js-accordion dd{
+  display: none;
+}
+
+.js-accordion dd.active {
+  display: block;
+  animation: show-answer .5s alternate;
+}
+
+@keyframes show-answer {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 100%;
   }
 }
