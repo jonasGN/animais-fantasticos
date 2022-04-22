@@ -1,9 +1,9 @@
 /* globals */
 @import url("./global.css");
 
-/* variables */
-@import url("./vars/colors.css");
-@import url("./vars/fonts.css");
+/* configurations */
+@import url("./config/colors.css");
+@import url("./config/fonts.css");
 
 /* components */
 @import url("./components/menu.css");
