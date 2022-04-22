@@ -2,6 +2,7 @@ import initShowContentOnScroll from "./modules/show-on-scroll.js";
 import initWindowSmoothScroll from "./modules/smooth-scroll.js";
 import initTabNav from "./modules/tab-nav.js";
 import initAccordionFaqAnimation from "./modules/accordion-faq.js";
+import initModal from "./modules/modal.js";
 
 // window scripts
 initShowContentOnScroll();
@@ -14,3 +15,6 @@ initTabNav();
 
 // faq section scripts
 initAccordionFaqAnimation();
+
+// other scripts
+initModal();

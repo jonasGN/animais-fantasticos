@@ -2,7 +2,6 @@
   grid-column: 2 / 4;
   width: 100%;
   padding: 1rem;
-  box-sizing: border-box;
   font-size: 1.6rem;
   display: grid;
   grid-template-columns: 90px 300px 1fr;

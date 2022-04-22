@@ -2,11 +2,13 @@
   /* main */
   --primary-color: #fb5;
   --secondary-color: #e54;
-  
+  --light-color: #fff;
+
   /* complementary */
   --darker-color: #222;
   --background-color: #faf6ed;
 
   /* main variations */
   --secondary-color-05: rgba(238, 85, 68, 0.05);
+  --modal-background-color: rgba(34, 34, 34, 0.3);
 }

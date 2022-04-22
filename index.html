@@ -24,7 +24,7 @@
             <li><a href="#animals">Animais</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contato</a></li>
-            <li><a href="https://github.com/jonasGN" target="_blank">Dev →</a></li>
+            <li><a href="./login.html" target="_blank" data-modal="open">Login →</a></li>
         </ul>
     </nav>
 
@@ -146,6 +146,20 @@
     <footer class="footer">
         <span>Logo <span></span> Todos os direitos reservados.</span>
     </footer>
+
+    <section class="modal-container" data-modal="container">
+        <div class="modal" data-modal="modal">
+            <h3 class="modal-title">Login</h3>
+            <button class="close-button" data-modal="close"><img src="./assets/icons/close.svg"></button>
+            <form action="">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password">
+                <button type="submit" class="login-button">Entrar</button>
+            </form>
+        </div>
+    </section>
     <script type="module" src="./scripts/script.js"></script>
 </body>
 

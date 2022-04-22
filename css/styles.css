@@ -9,6 +9,7 @@
 @import url("./components/menu.css");
 @import url("./components/grid-section.css");
 @import url("./components/footer.css");
+@import url("./components/modal.css");
 
 /* sections */
 @import url("./animals.css");
