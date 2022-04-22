@@ -66,20 +66,29 @@
 }
 
 /* styles controled by scripts */
-.js-enabled .animals-list li {
+[data-js] .animals-list li {
   cursor: pointer;
 }
 
-.js-enabled .js-tabcontent section {
+[data-js] [data-tab-content] section {
   display: none;
 }
 
-.js-tabcontent section.active {
+[data-tab-content] section.active {
   display: block;
-  animation: show-content .5s forwards;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes show-content {
+[data-tab-content] section.active.show-right {
+  animation-name: anime-right;
+}
+
+[data-tab-content] section.active.show-down {
+  animation-name: anime-down;
+}
+
+@keyframes anime-right {
   from {
     opacity: 0;
     transform: translate3d(-3rem, 0, 0);
@@ -87,5 +96,16 @@
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes anime-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

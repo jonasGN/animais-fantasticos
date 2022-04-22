@@ -42,13 +42,13 @@ img {
 }
 
 /* styles controlled by scripts */
-.js-enabled .js-section {
+[data-js] [data-section] {
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
   transform: translateX(-5rem);
 }
 
-.js-enabled .js-section.active {
+[data-js] [data-section].active {
   opacity: 1;
   transform: translateX(0);
 }

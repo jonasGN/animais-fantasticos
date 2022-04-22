@@ -34,32 +34,32 @@
 }
 
 /* styles controled by scripts */
-.js-enabled .js-accordion dt {
+[data-js] [data-accordion] dt {
   padding: 1.4rem 0;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
   margin-top: 2.4rem;
 }
 
-.js-enabled .js-accordion dt:hover {
+[data-js] [data-accordion] dt:hover {
   background-color: var(--secondary-color-05);
 }
 
-.js-enabled .js-accordion dt::after {
+[data-js] [data-accordion] dt::after {
   content: "↴";
   margin-left: 1rem;
 }
 
-.js-enabled .js-accordion dt.active::after {
+[data-js] [data-accordion] dt.active::after {
   content: "↰";
 }
 
-.js-enabled .js-accordion dd{
+[data-js] [data-accordion] dd {
   display: none;
 }
 
-.js-accordion dd.active {
+[data-accordion] dd.active {
   display: block;
-  animation: show-answer .5s alternate;
+  animation: show-answer 0.5s alternate;
 }
 
 @keyframes show-answer {
