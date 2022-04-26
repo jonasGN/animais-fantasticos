@@ -24,6 +24,10 @@
   letter-spacing: 0.1rem;
 }
 
+.menu a:hover {
+  color: var(--light-color);
+}
+
 @media (max-width: 700px) {
   .menu {
     grid-column: 1 / -1;

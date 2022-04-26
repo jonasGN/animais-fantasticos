@@ -11,4 +11,5 @@
   /* main variations */
   --secondary-color-05: rgba(238, 85, 68, 0.05);
   --modal-background-color: rgba(34, 34, 34, 0.3);
+  --tooltip-background-color: rgba(34, 34, 34, 0.6);
 }
