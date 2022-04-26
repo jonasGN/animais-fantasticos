@@ -1,5 +1,4 @@
 const container = document.querySelector("[data-modal='container']");
-const modal = document.querySelector("[data-modal='modal']");
 const menuButton = document.querySelector("[data-modal='open']");
 const closeButton = document.querySelector("[data-modal='close']");
 
@@ -21,5 +20,5 @@ function onClickOutside(event) {
 }
 
 function hasModal() {
-  return container && modal && menuButton && closeButton;
+  return container && menuButton && closeButton;
 }
