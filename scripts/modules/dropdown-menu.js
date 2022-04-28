@@ -1,17 +1,15 @@
-import { onClickOutside } from "./html-events.js";
+import { onClickOutside, touchEvents } from "./click-events.js";
 
 const dropdownMenu = document.querySelector("[data-dropdown]");
 
-const userEvents = ["click", "touchstart"];
-
 function onClickMenu(event) {
   event.preventDefault();
-  onClickOutside(this, userEvents);
+  onClickOutside(this, touchEvents);
 }
 
 export default function initDropdownMenu() {
   if (dropdownMenu) {
-    userEvents.forEach((event) => {
+    touchEvents.forEach((event) => {
       dropdownMenu.addEventListener(event, onClickMenu);
     });
   }

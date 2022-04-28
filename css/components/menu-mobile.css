@@ -1,0 +1,53 @@
+[data-menu="button"] {
+  padding-inline: 1.6rem;
+  padding-block: 0.8rem;
+  min-height: 4.8rem;
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  background-color: var(--darker-color);
+  color: var(--light-color);
+  border-radius: 0.4rem;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+[data-menu="button"]::before {
+  content: "";
+  display: block;
+  background: url("../../assets/icons/menu-icon.svg") no-repeat;
+  height: 2.4rem;
+  width: 2.4rem;
+  margin-right: 0.8rem;
+  transition: transform 0.3s;
+}
+
+@media (max-width: 700px) {
+  [data-js] [data-menu="button"] {
+    display: flex;
+    position: relative;
+    z-index: 2;
+  }
+  [data-js] #menu {
+    background-color: var(--primary-color);
+    min-width: 200px;
+    padding-top: 6.8rem;
+    box-shadow: 0.2rem 0.2rem 1rem var(--modal-background-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    animation: anime-right 0.3s forwards;
+  }
+  [data-js] #menu.active {
+    display: block;
+  }
+  [data-js] .dropdown-menu {
+    border: none;
+    position: static;
+  }
+}

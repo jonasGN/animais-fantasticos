@@ -3,12 +3,12 @@
   background-color: var(--primary-color);
   margin-top: 3.6rem;
   margin-bottom: 3.6rem;
+  padding: 1rem;
 }
 
 .menu ul {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
   gap: 1rem;
 }
 
