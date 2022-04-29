@@ -7,9 +7,14 @@ export default function initShowContentOnScroll() {
         const sectionTop = section.getBoundingClientRect().top;
         const visibleHeight = window.innerHeight * 0.7;
         const isSectionVisible = sectionTop - visibleHeight <= 0;
+        const hasActiveClass = section.classList.contains("active");
 
         if (isSectionVisible) {
+          if (hasActiveClass) return;
           section.classList.add("active");
+        } else {
+          if (!hasActiveClass) return;
+          section.classList.remove("active");
         }
       });
     }
