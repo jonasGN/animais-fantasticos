@@ -7,6 +7,7 @@ import initTooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initNumbersAnimation from "./modules/numbers-animation.js";
+import initWorkingPeriod from "./modules/working-period.js";
 
 // window scripts
 initShowContentOnScroll();
@@ -26,3 +27,4 @@ initTooltip();
 initDropdownMenu();
 initMenuMobile();
 initNumbersAnimation();
+initWorkingPeriod();
