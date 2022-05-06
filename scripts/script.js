@@ -6,8 +6,9 @@ import initModal from "./modules/modal.js";
 import initTooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
-import initNumbersAnimation from "./modules/numbers-animation.js";
 import initWorkingPeriod from "./modules/working-period.js";
+import initFecthAnimals from "./modules/fetch-animals.js";
+import initBtcTicker from "./modules/btc-ticker.js";
 
 // window scripts
 initShowContentOnScroll();
@@ -26,5 +27,6 @@ initModal();
 initTooltip();
 initDropdownMenu();
 initMenuMobile();
-initNumbersAnimation();
 initWorkingPeriod();
+initFecthAnimals();
+initBtcTicker();

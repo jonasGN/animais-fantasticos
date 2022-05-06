@@ -16,6 +16,12 @@
   margin-right: 1rem;
 }
 
+[data-js] .contact-list .btc-price {
+  background-color: var(--positive-color);
+  padding: 0.2rem 0.8rem;
+  font-weight: bold;
+}
+
 [data-js] [data-working-period]::after {
   content: "";
   display: inline-block;
@@ -28,7 +34,7 @@
 }
 
 [data-js] [data-working-period].active::after {
-  background-color: #09a036;
+  background-color: var(--positive-color);
 }
 
 @media (max-width: 700px) {
