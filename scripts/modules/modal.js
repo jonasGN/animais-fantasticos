@@ -2,13 +2,7 @@ const container = document.querySelector("[data-modal='container']");
 const menuButton = document.querySelector("[data-modal='open']");
 const closeButton = document.querySelector("[data-modal='close']");
 
-export default function initModal() {
-  if (hasModal()) {
-    menuButton.addEventListener("click", toggleModal);
-    closeButton.addEventListener("click", toggleModal);
-    container.addEventListener("click", onClickOutside);
-  }
-}
+const hasModal = container && menuButton && closeButton;
 
 function toggleModal(event) {
   event.preventDefault();
@@ -16,9 +10,13 @@ function toggleModal(event) {
 }
 
 function onClickOutside(event) {
-  if (this == event.target) toggleModal(event);
+  if (this === event.target) toggleModal(event);
 }
 
-function hasModal() {
-  return container && menuButton && closeButton;
+export default function initModal() {
+  if (hasModal) {
+    menuButton.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    container.addEventListener("click", onClickOutside);
+  }
 }

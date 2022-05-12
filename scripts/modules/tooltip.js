@@ -1,17 +1,5 @@
 const map = document.querySelector("[data-tooltip='map']");
 
-function onMouseIn() {
-  const tooltip = createTooltipFrom(this);
-  document.body.appendChild(tooltip);
-
-  onMouseMove.tooltip = tooltip;
-  this.addEventListener("mousemove", onMouseMove);
-
-  onMouseOut.tooltip = tooltip;
-  onMouseOut.element = this;
-  this.addEventListener("mouseleave", onMouseOut);
-}
-
 function createTooltipFrom(element) {
   const tooltip = document.createElement("div");
   tooltip.classList.add("tooltip");
@@ -35,6 +23,19 @@ const onMouseOut = {
   },
 };
 
+function onMouseIn() {
+  const tooltip = createTooltipFrom(this);
+  document.body.appendChild(tooltip);
+
+  onMouseMove.tooltip = tooltip;
+  this.addEventListener("mousemove", onMouseMove);
+
+  onMouseOut.tooltip = tooltip;
+  onMouseOut.element = this;
+  this.addEventListener("mouseleave", onMouseOut);
+}
+
 export default function initTooltip() {
-  if (map) map.addEventListener("mouseover", onMouseIn);
+  if (!map) return;
+  map.addEventListener("mouseover", onMouseIn);
 }

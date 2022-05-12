@@ -1,5 +1,6 @@
 const html = document.documentElement;
 
+export const touchEvents = ["click", "touchstart"];
 /**
  * Types
  * @param {HTMLElement} element html element
@@ -10,6 +11,18 @@ export function onClickOutside(element, events, callBack) {
   const outside = "data-outside";
   const hasOutside = element.hasAttribute(outside);
 
+  function handleClickOutside(event) {
+    if (!element.contains(event.target)) {
+      element.removeAttribute(outside);
+      events.forEach((userEvent) => {
+        html.removeEventListener(userEvent, handleClickOutside);
+      });
+
+      if (callBack === undefined) return;
+      callBack();
+    }
+  }
+
   if (!hasOutside) {
     element.setAttribute(outside, "");
     events.forEach((userEvent) => {
@@ -17,16 +30,4 @@ export function onClickOutside(element, events, callBack) {
       setTimeout(() => html.addEventListener(userEvent, handleClickOutside));
     });
   }
-
-  function handleClickOutside(event) {
-    if (!element.contains(event.target)) {
-      element.removeAttribute(outside);
-      events.forEach((userEvent) => {
-        html.removeEventListener(userEvent, handleClickOutside);
-      });
-      !callBack ? null : callBack();
-    }
-  }
 }
-
-export const touchEvents = ["click", "touchstart"];

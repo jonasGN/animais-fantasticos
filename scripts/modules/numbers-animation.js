@@ -1,31 +1,15 @@
 const numbersElement = document.querySelectorAll("[data-number]");
 
-const observer = new MutationObserver(mutationHandler);
-
-// watch for attributes changes in numbers section
-function observeMutations() {
-  const observerTarget = document.getElementById("numbers");
-  observer.observe(observerTarget, { attributes: true });
-}
-
-function mutationHandler(mutation) {
-  const isTargeActive = mutation[0].target.classList.contains("active");
-  if (!isTargeActive) return;
-
-  animateNumbers();
-  observer.disconnect();
-}
-
 function animateNumbers() {
   numbersElement.forEach((n) => {
-    const number = Number.parseInt(n.innerHTML);
+    const number = Number.parseInt(n.innerHTML, 10);
 
     let counter = 0;
     const interval = Math.floor(number / 100);
 
     const timer = setInterval(() => {
       counter += interval;
-      n.innerHTML = Number.parseInt(counter);
+      n.innerHTML = Number.parseInt(counter, 10);
 
       if (counter >= number) {
         clearInterval(timer);
@@ -33,6 +17,24 @@ function animateNumbers() {
       }
     }, 20 * Math.random());
   });
+}
+
+function mutationHandler(mutation, observer) {
+  const isTargeActive = mutation[0].target.classList.contains("active");
+  if (!isTargeActive) return;
+
+  animateNumbers();
+  observer.disconnect();
+}
+
+const observer = new MutationObserver((mutation) => {
+  mutationHandler(mutation, observer);
+});
+
+// watch for attributes changes in numbers section
+function observeMutations() {
+  const observerTarget = document.getElementById("numbers");
+  observer.observe(observerTarget, { attributes: true });
 }
 
 export default function initNumbersAnimation() {
